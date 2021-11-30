@@ -12,7 +12,7 @@ namespace TriangleCGI
 
         /* Hier definiere ich ein neues Zentrum. Von dem ich grundsätzlich mit Vektorenrotationen neue Eckpunkte definiere*/
         Point Center = new Point(250, 250); //Center
-        readonly int Radius = 250; /* Hier ist der Radius wichtig für das Vektorprodukt ich möchte mich ja immer am Rand des Radiuses bewegen (Einheitskreis)*/
+        readonly int Radius = 200; /* Hier ist der Radius wichtig für das Vektorprodukt ich möchte mich ja immer am Rand des Radiuses bewegen (Einheitskreis)*/
         readonly List<Point> Points = new List<Point>();
 
         readonly Bitmap bmp = new Bitmap(500, 500);
@@ -74,7 +74,7 @@ namespace TriangleCGI
                     bmp.SetPixel(newpoint.X, newpoint.Y, randomColorPoint);
 
 
-                    if (i % 10000 == 0) //Performance Verbesserung für das Einzeichnen. Die Punkte werden im 10k Schritt eingezeichnet
+                    if (i % 5000 == 0) //Performance Verbesserung für das Einzeichnen. Die Punkte werden im 10k Schritt eingezeichnet
                     {
                         pictureBox1.Image = bmp;
                         pictureBox1.Update();
